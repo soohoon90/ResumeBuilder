@@ -173,65 +173,36 @@ header .tagline {
     box-shadow: 0 0 10px #000000;
 }
 
-#info {
+.part {
   padding: 3em; 
   
   /*border: 1px solid #b3b3b3;*/
 }
 
-#info h3 {
-  margin-top: 1em;
-  padding-top: 0.5em;
-  border-top: 1px #888 solid;
-  color: #111;
-  font-weight: bold;
-  font-size: 16px;
-}
-#info ul{
+
+.part ul{
     margin-top: 1em;
 }
-#info li a:link,
-#info li a:visited {
+.part li a:link,
+.part li a:visited {
   color: #7c7c7c;
   display: block;
   line-height: 32px;
   padding-left: 36px;
 }
 
-#info li{
+.part li{
     list-style: square;
     margin-left: 3em;
     font-size: 12px;
     color: #888;
 }
 
-#info li strong{
+.part li strong{
     font-weight: bold;
     color: #333;
     font-size: 13px;
 }
-
-#info .inline li {
-  float: left;
-  margin-left: 12px;
-  overflow: hidden;
-  padding: 0;
-  width: 32px;
-  background-position: center 25%;
-  background-repeat: no-repeat;
-  -moz-background-size: cover;
-  background-size: cover;
-}
-
-#info .inline li a:link,
-#info .inline li a:visited {
-  display: block;
-  width: 32px;
-  height: 32px;
-  overflow: hidden;
-  text-indent: -9999px;
-}
-
 
 /* ------------------------------------------ */
 

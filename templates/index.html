@@ -32,51 +32,76 @@
         </p>
       </div>
     </header>
-    <section id="get-started" class="msg">
-      <p>Welcome to <span>{{app.name}}</span>!</p>
+
+    <section class="msg">
+      <p>Let's get started with <span>{{app.name}}</span>!</p>
     </section>
-    <section id="info" class="clearfix dropshadow">
-      <div class="block">
+
+    <section class="part dropshadow">
         <h1>{{me.name}}</h1>
         <h2>{{me.bio}}</h2>
-        <ul>{% for website in me.website %}
+        <ul>
+        {% for website in me.website %}
             <li>
                 <a href="{{website}}">{{website}}</a>
-            </li>{% endfor %}<ul>
-      </div>
-      <div class="block">
-        <h3>Your Work History</h3>
-        <ul class="work">{% for work in me.work %}
-        <li>
-            <p><strong>{{work.position.name}} at {{work.employer.name}}</strong>, {{work.location.name}}</p>
-            <p>from {{work.start_date}} to {{work.end_date}}</p>
-            <ul class="project">{% for project in work.projects %}
+            </li>
+        {% endfor %}
+        <ul>
+    </section>
+    
+    <section class="msg">
+      <p>Verify your <span>Work History</span></p>
+      <a class="button" href="https://www.facebook.com/editprofile.php?sk=eduwork">Complete your Profile</a>
+    </section>
+
+    <section class="part dropshadow">
+        <h1>Your Work History</h1>
+        <ul class="big-list">
+        {% for work in me.work %}
+          <li>
+            <p>
+                <strong>{{work.position.name}} at {{work.employer.name}}</strong>,
+                {{work.location.name}}, from {{work.start_date}} to {{work.end_date}}
+            </p>
+            <ul class="small-list">
+                {% for project in work.projects %}
                 <li>
                     <strong>{{project.name}}</strong><br />
                     {{project.description}}
-                </li>{% endfor %}</ul>
-        </li>{% endfor %}</ul>
-      </div>
-      <div class="block">
-        <h3>Your Education</h3>
-        <ul class="work">{% for school in me.education %}
-        <li>
-            {% if school.concentration %}
-            <p><strong>{{school.concentration.name}}</strong> at <strong>{{school.school.name}}</strong></p>
-            {% else %}
-            <p><strong>{{school.school.name}}</strong></p>
-            {% endif %}
-            <ul class="project">{% for class in school.classes %}
+                </li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}</ul>
+    </section>
+
+    <section class="msg">
+      <p>Verify your <span>Education History</span></p>
+      <a class="button" href="https://www.facebook.com/editprofile.php?sk=eduwork">Complete your Profile</a>
+    </section>
+
+    <section class="part dropshadow">
+        <h1>Your Work History</h1>
+        <ul class="big-list">
+        {% for school in me.education %}
+          <li>
+            <p>
+                {% if school.concentration %}
+                <strong>{{school.concentration.name}} at {{school.school.name}}</strong>
+                {% else %}
+                <p><strong>{{school.school.name}}</strong></p>
+                {% endif %}
+            </p>
+            <ul class="small-list">
+                {% for class in school.classes %}
                 <li>
                     <strong>{{class.name}}</strong><br />
                     {{class.description}}
-                </li>{% endfor %}</ul>
-        </li>{% endfor %}</ul>
-      </div>
-    </section>
-    <section id="the-end" class="msg">
-      <p>Not seeing what you like? You can make it better.</p>
-      <a class="button" href="https://www.facebook.com/editprofile.php?sk=eduwork">Complete your Profile</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}</ul>
     </section>
   </body>
 </html>
