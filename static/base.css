@@ -174,87 +174,10 @@ header .tagline {
   font-family: "HybreaRegular";
   font-size: 22px;
 }
+
 /* ------------------------------------------ */
 
-/* =guides/samples spacing
---------------------------------------------- */
-#guides h1,
-#samples h1 {
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-#guides, #samples {
-  padding: 20px 10px 20px 14px;
-}
-
-#guides ul li,
-#samples .list {
-  float: left;
-  margin-right: 7px;
-  width: 172px;
-}
-
-#guides ul li p,
-#samples ul {
-  padding: 0 4px;
-}
-/* ------------------------------------------ */
-
-/* =guides
---------------------------------------------- */
-#guides {
-  border-bottom: 1px solid #b3b3b3;
-  border-left: 1px solid #b3b3b3;
-  border-right: 1px solid #b3b3b3;
-}
-
-#guides ul li {
-  font-size: 11px;
-  list-style: none;
-}
-
-#guides ul li p {
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  line-height: 20px;
-  text-align: justify;
-}
-
-#guides ul li:first-child {
-  margin-left: 0;
-}
-
-#guides ul li a.icon {
-  background: url("/static/images/sprites.png") no-repeat;
-  display: block;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 14px;
-  margin-bottom: 10px;
-  padding-top: 124px;
-  text-align: center;
-}
-
-#guides ul li a.websites {
-  background-position: 35px -87px;
-}
-
-#guides ul li a.mobile-apps {
-  background-position: 35px -231px;
-}
-
-#guides ul li a.apps-on-facebook {
-  background-position: 35px -375px;
-}
-
-#guides ul li a.heroku {
-  background-position: 35px -519px;
-}
-/* ------------------------------------------ */
-
-/* =samples
---------------------------------------------- */
-#samples {
+#info {
   background-image: url("/static/images/samples-bg.png");
   border-bottom: 1px solid #dadada;
   border-left: 1px solid #b3b3b3;
@@ -262,7 +185,7 @@ header .tagline {
   border-top: 1px solid #fff;
 }
 
-#samples h3 {
+#info h3 {
   background: url("/static/images/header-sketch.png") no-repeat;
   color: #646464;
   font-weight: bold;
@@ -271,48 +194,16 @@ header .tagline {
   text-align: center;
 }
 
-#samples ul {
-  background: url("/static/images/picture-sketch.png") 4px 8px;
-  background-repeat: repeat-y;
-  height: 161px;
-  overflow: hidden;
-  padding-top: 8px;
-}
 
-#samples li {
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  color: #7c7c7c;
-  display: block;
-  font-size: 11px;
-  font-weight: bold;
-  height: 32px;
-  margin-bottom: 11px;
-  overflow: hidden;
-  position: relative;
-}
-
-#samples li a:link,
-#samples li a:visited {
+#info li a:link,
+#info li a:visited {
   color: #7c7c7c;
   display: block;
   line-height: 32px;
   padding-left: 36px;
 }
 
-#samples .list img {
-  height: auto;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 32px;
-}
-
-#samples .inline ul {
-  background-repeat: repeat;
-}
-
-#samples .inline li {
+#info .inline li {
   float: left;
   margin-left: 12px;
   overflow: hidden;
@@ -324,12 +215,8 @@ header .tagline {
   background-size: cover;
 }
 
-#samples .inline li.first-column {
-  margin-left: 0;
-}
-
-#samples .inline li a:link,
-#samples .inline li a:visited {
+#info .inline li a:link,
+#info .inline li a:visited {
   display: block;
   width: 32px;
   height: 32px;

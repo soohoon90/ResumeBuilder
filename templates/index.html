@@ -34,14 +34,15 @@
     </header>
     <section id="get-started" class="msg">
       <p>Welcome to <span>{{app.name}}</span>!</p>
-      <p>Not seeing what you like?</p>
-      <a class="button" href="https://www.facebook.com/editprofile.php?sk=eduwork">Complete your Profile</a>
     </section>
-    <section class="clearfix" id="samples">
-      <h1>Your Profile</h1>
+    <section class="clearfix" id="info">
       <div class="block">
         <h1>{{me.name}}</h1>
         <h2>{{me.bio}}</h2>
+        <ul>{% for website in me.website %}
+            <li>
+                <a href="{{website}}">{{website}}</a>
+            </li>{% endfor %}<ul>
       </div>
       <div class="block">
         <h3>Your Work History</h3>
@@ -56,6 +57,19 @@
                 <li>{% endfor %}</ul>
         </li>{% endfor %}</ul>
       </div>
+      <div class="block">
+        <h3>Your Education</h3>
+        <ul class="work">{% for school in me.education %}
+        <li>
+            <p>{{school.concentration}} at {{school.school.name}}</p>
+            <ul class="project">{% for class in school.classes %}
+                <li>
+                    <strong>{{class.name}}</strong><br />
+                    {{class.description}}
+                <li>{% endfor %}</ul>
+        </li>{% endfor %}</ul>
+      </div>
+
     </section>
     <section id="the-end" class="msg">
       <p>Not seeing what you like? You can make it better.</p>
