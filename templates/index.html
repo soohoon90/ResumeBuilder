@@ -35,18 +35,15 @@
 
     <section class="msg">
       <p>Let's get started with <span>{{app.name}}</span>!</p>
+      <p>Please verify your basic info</p>
     </section>
 
     <section class="part dropshadow">
         <h1>{{me.name}}</h1>
-        <h2>{{me.bio}}</h2>
-        <ul>
-        {% for website in me.website %}
-            <li>
-                <a href="{{website}}">{{website}}</a>
-            </li>
-        {% endfor %}
-        <ul>
+        {% if me.bio %} <h2>{{me.bio}}</h2> {% endif %}
+        {% if me.website %} Website: <a href="{{me.website}}">{{me.website}}</a>{% endif %}
+        {% if me.location %} Current Location: {{me.location}}</a>{% endif %}
+        {% if me.email %} Email: {{me.email}}{% endif %}
     </section>
     
     <section class="msg">
@@ -64,7 +61,7 @@
                 {{work.location.name}}, from {{work.start_date}} to {{work.end_date}}
             </p>
             <ul class="small-list">
-                {% for project in work.projects %}
+                u{% for project in work.projects %}
                 <li>
                     <strong>{{project.name}}</strong><br />
                     {{project.description}}
@@ -81,7 +78,7 @@
     </section>
 
     <section class="part dropshadow">
-        <h1>Your Work History</h1>
+        <h1>Your Education History</h1>
         <ul class="big-list">
         {% for school in me.education %}
           <li>
