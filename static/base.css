@@ -165,6 +165,8 @@ header .tagline {
     box-shadow: 0 0 10px #000000;
 }
 
+/* ------------------------------------------ */
+
 .part {
   padding: 3em; 
   border-left: 1px solid #b3b3b3;
@@ -175,6 +177,7 @@ header .tagline {
 .part ul{
     margin-top: 1em;
 }
+
 .part li a:link,
 .part li a:visited {
   color: #7c7c7c;
@@ -194,6 +197,16 @@ header .tagline {
     font-weight: bold;
     color: #333;
     font-size: 13px;
+}
+
+/* ------------------------------------------ */
+
+.editable{
+	background-color: #F7F3BA;
+}
+
+.ui-state-hover{
+	background-color: #DFF7BA;
 }
 
 /* ------------------------------------------ */
