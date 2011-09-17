@@ -39,31 +39,34 @@
     <section class="msg innershadow">
       <p>Let's get started with <span>{{app.name}}</span>!</p>
       <p>Please verify your basic info below</p>
+      <p>You can edit many values by clicking on them</p>
     </section>
 
     <section class="part ">
-        <pre>{{me}}</pre>
-        <h1>{{me.name}}</h1>
+        <!-- debug -->
+        <p>{{me}}</p>
+        
+        <h1 class="editable">{{me.name}}</h1>
         {% if me.bio %}
-			<h2>{{me.bio}}</h2>
+			<h2 class="editable">{{me.bio}}</h2>
 		{% endif %}
         <h2>Website:</h2>
  		{% if me.website %} 
-			<a href="{{me.website}}">{{me.website}}</a>
+			<a href="{{me.website}}" class="editable">{{me.website}}</a>
 		{% else %}
-			website missing
+			<p class="editable">website missing</p>
 		{% endif %}
         <h2>Current Location:</h2> 
 		{% if me.location %}
 			{{me.location.name}}
 		{% else %}
-			location missing
+			<p class="editable">location missing</p>
 		{% endif %}
         <h2>Email:</h2> 
 		{% if me.email %}
 			{{me.email}}
 		{% else %}
-			email missing
+			<p class="editable">email missing</p>
 		{% endif %}
     </section>
     
@@ -77,14 +80,14 @@
         {% for work in me.work %}
           <li>
             <p>
-                <strong>{{work.position.name}} at {{work.employer.name}}</strong>,
-                {{work.location.name}}, from {{work.start_date}} to {{work.end_date}}
+                <strong class="editable">{{work.position.name}} at {{work.employer.name}}</strong>,
+                <span class="editable">{{work.location.name}}, from {{work.start_date}} to {{work.end_date}}</span>
             </p>
             <ul class="small-list">
                 {% for project in work.projects %}
                 <li>
-                    <strong>{{project.name}}</strong><br />
-                    {{project.description}}
+                    <strong class="editable">{{project.name}}</strong><br />
+                    <span class="editable">{{project.description}}</span>
                 </li>
                 {% endfor %}
             </ul>
@@ -101,18 +104,20 @@
         <ul class="big-list">
         {% for school in me.education %}
           <li>
+            <!-- debug -->
+            {{school}}  
             <p>
                 {% if school.concentration %}
-                <strong>{{school.concentration.name}} at {{school.school.name}}</strong>
+                <strong class="editable">{{school.concentration.name}} at {{school.school.name}}</strong>
                 {% else %}
-                <p><strong>{{school.school.name}}</strong></p>
+                <strong class="editable">{{school.school.name}}</strong>
                 {% endif %}
             </p>
             <ul class="small-list">
                 {% for class in school.classes %}
                 <li>
-                    <strong>{{class.name}}</strong><br />
-                    {{class.description}}
+                    <strong class="editable">{{class.name}}</strong><br />
+                    <span class="editable">{{class.description}}</span>
                 </li>
                 {% endfor %}
             </ul>
@@ -126,13 +131,13 @@
     </section>
 
     <section class="part ">
-        <h1>Your new section</h1>
-        <p>Add new information</p>
+        <h1 class="editable">Your new section</h1>
+        <p class="editable">Add new information</p>
     </section>
 
     <section class="msg innershadow">
       <p>Not satisfied with Information from Facebook?</p>
-      <a class="button" href="https://www.facebook.com/editprofile.php?sk=eduwork">Complete your Profile</a>
+      <p>Come back after <a class="button" href="https://www.facebook.com/editprofile.php?sk=eduwork">Completing your Profile</a></p>
     </section>
 
   </body>
