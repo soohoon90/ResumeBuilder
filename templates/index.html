@@ -62,18 +62,17 @@
         <ul class="work">{% for school in me.education %}
         <li>
             {% if school.concentration %}
-            <p>{{school.concentration.name}} at {{school.school.name}}</p>
+            <p><strong>{{school.concentration.name}}</strong> at <strong>{{school.school.name}}</strong></p>
             {% else %}
-            <p>{{school.school.name}}</p>
+            <p><strong>{{school.school.name}}</strong></p>
             {% endif %}
             <ul class="project">{% for class in school.classes %}
                 <li>
                     <strong>{{class.name}}</strong><br />
                     {{class.description}}
-                <li>{% endfor %}</ul>
+                </li>{% endfor %}</ul>
         </li>{% endfor %}</ul>
       </div>
-
     </section>
     <section id="the-end" class="msg">
       <p>Not seeing what you like? You can make it better.</p>
