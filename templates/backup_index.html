@@ -10,12 +10,20 @@
     <!-- over facebook.  You should fill these tags in with      -->
     <!-- your data.  To learn more about Open Graph, visit       -->
     <!-- 'https://developers.facebook.com/docs/opengraph/'       -->
-    <meta content="The Resume Builder" property="og:title" />
-    <meta content="product" property="og:type" />
-    <meta content="https://apps.facebook.com/theresumebuilder/" property="og:url" />
+    <meta content="" property="og:title" />
+    <meta content="" property="og:type" />
+    <meta content="" property="og:url" />
     <meta content="" property="og:image" />
     <meta content="" property="og:site_name" />
     <meta content="{{appId}}" property="fb:app_id" />
+    <script type="text/javascript">function popup(pageURL, title,w,h) { var left = (screen.width/2)-(w/2); var top = (screen.height/2)-(h/2); var targetWin = window.open( pageURL, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left ); }</script>
+    <!--[if IE]>
+      <script>
+        var tags = ['header', 'section'];
+        while(tags.length)
+          document.createElement(tags.pop());
+      </script>
+    <![endif]-->
   </head>
   <body>
     <header class="clearfix">
@@ -26,10 +34,23 @@
       <div>
         <h1>Welcome, <strong>{{me.name}}</strong></h1>
         <p class="tagline">
-          You are using 
+          This is your app
           <a href="{{app.link}}">{{app.name}}</a>
-          to generate your HTML resume
         </p>
+        <div id="share-app">
+          <ul>
+            <li>
+              <a class="facebook-button" href="#" onclick="popup('{{POST_TO_WALL}}', 'Post to Wall', 580, 400);">
+                <span class="plus">Post to Wall</span>
+              </a>
+            </li>
+            <li>
+              <a class="facebook-button speech-bubble" href="#" onclick="popup('{{SEND_TO}}', 'Send', 580, 400);">
+                <span class="speech-bubble">Send to Friends</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <section id="get-started">
