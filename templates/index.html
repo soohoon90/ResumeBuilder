@@ -41,13 +41,11 @@
     <section class="clearfix" id="samples">
       <h1>Examples of the Facebook Graph API</h1>
       <div class="list">
-        <h3>A few of your friends</h3>
-        <ul class="friends">{% for friend in friends.data %}
+        <h3>Your Work History</h3>
+        <ul class="friends">{% for work in me.work %}
         <li>
-          <a href="#" onclick="window.open('http://www.facebook.com/{{friend.id}}')">
-            <img src="https://graph.facebook.com/{{friend.id}}/picture" alt="{{friend.name}}">
-            {{friend.name}}
-          </a>
+            <p><strong>{{work.position.name}} at {{work.employer.name}}</strong>, {{work.location.name}}</p>
+            <p>from {{work.start_date}} to {{work.end_date}}</p>
         </li>{% endfor %}</ul>
       </div>
       <div class="list inline">
