@@ -188,8 +188,13 @@ header .tagline {
 #info li{
     list-style: square;
     margin-left: 3em;
-    font-size: 11px;
+    font-size: 12px;
     color: #888;
+}
+
+#info li strong{
+    color: #333;
+    font-size: 13px;
 }
 
 #info .inline li {
