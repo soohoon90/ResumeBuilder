@@ -65,6 +65,7 @@
             <p>{{school.concentration.name}} at {{school.school.name}}</p>
             {% else %}
             <p>{{school.school.name}}</p>
+            {% endif %}
             <ul class="project">{% for class in school.classes %}
                 <li>
                     <strong>{{class.name}}</strong><br />
