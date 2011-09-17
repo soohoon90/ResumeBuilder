@@ -163,20 +163,21 @@ header .tagline {
 /* ------------------------------------------ */
 
 #info {
-  background-image: url("/static/images/samples-bg.png");
-  border-bottom: 1px solid #dadada;
-  border-left: 1px solid #b3b3b3;
-  border-right: 1px solid #b3b3b3;
-  border-top: 1px solid #fff;
+  padding: 3em; 
+  border: 1px solid #b3b3b3;
 }
 
 #info h3 {
-  color: #646464;
+  margin-top: 1em;
+  padding-top: 0.5em;
+  border-top: 1px #888 solid;
+  color: #111;
   font-weight: bold;
-  font-size: 13px;
-  line-height: 29px;
+  font-size: 16px;
 }
-
+#info ul{
+    margin-top: 1em;
+}
 #info li a:link,
 #info li a:visited {
   color: #7c7c7c;
@@ -193,6 +194,7 @@ header .tagline {
 }
 
 #info li strong{
+    font-weight: bold;
     color: #333;
     font-size: 13px;
 }
