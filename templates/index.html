@@ -42,7 +42,7 @@
         <h1>{{me.name}}</h1>
         {% if me.bio %} <h2>{{me.bio}}</h2> {% endif %}
         {% if me.website %} Website: <a href="{{me.website}}">{{me.website}}</a>{% endif %}
-        {% if me.location %} Current Location: {{me.location}}</a>{% endif %}
+        {% if me.location %} Current Location: {{me.location.name}}</a>{% endif %}
         {% if me.email %} Email: {{me.email}}{% endif %}
     </section>
     
@@ -61,7 +61,7 @@
                 {{work.location.name}}, from {{work.start_date}} to {{work.end_date}}
             </p>
             <ul class="small-list">
-                u{% for project in work.projects %}
+                {% for project in work.projects %}
                 <li>
                     <strong>{{project.name}}</strong><br />
                     {{project.description}}
@@ -84,7 +84,7 @@
           <li>
             <p>
                 {% if school.concentration %}
-                <strong>{{school.concentration.name}} at {{school.school.name}}</strong>
+                <strong>{{school.concentration}} at {{school.school.name}}</strong>
                 {% else %}
                 <p><strong>{{school.school.name}}</strong></p>
                 {% endif %}
