@@ -171,12 +171,10 @@ header .tagline {
 }
 
 #info h3 {
-  background: url("/static/images/header-sketch.png") no-repeat;
   color: #646464;
   font-weight: bold;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 29px;
-  text-align: center;
 }
 
 #info li a:link,
@@ -189,7 +187,9 @@ header .tagline {
 
 #info li{
     list-style: square;
-    margin-left: 5em;
+    margin-left: 3em;
+    font-size: 11px;
+    color: #888;
 }
 
 #info .inline li {
