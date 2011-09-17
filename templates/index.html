@@ -18,6 +18,7 @@
     <meta content="{{appId}}" property="fb:app_id" />
   </head>
   <body>
+	
     <header class="clearfix">
       <!-- By passing a valid access token here, we are able to display -->
       <!-- the user's images without having to download or prepare -->
@@ -31,19 +32,36 @@
           to generate your HTML resume
         </p>
       </div>
-    </header>
+    </header>	
 
     <section class="msg innershadow">
       <p>Let's get started with <span>{{app.name}}</span>!</p>
-      <p>Please verify your basic info</p>
+      <p>Please verify your basic info below</p>
     </section>
 
     <section class="part ">
-        <h1>{{me.name}}</h1>
-        {% if me.bio %} <h2>{{me.bio}}</h2> {% endif %}
-        {% if me.website %} Website: <a href="{{me.website}}">{{me.website}}</a>{% endif %}
-        {% if me.location %} Current Location: {{me.location.name}}</a>{% endif %}
-        {% if me.email %} Email: {{me.email}}{% endif %}
+        <h1>{{me.name}}</h1>	
+        {% if me.bio %} 
+			<h2>{{me.bio}}</h2>
+		{% endif %}
+        <strong>Website:</strong>
+ 		{% if me.website %} 
+			<a href="{{me.website}}">{{me.website}}</a>
+		{% else %}
+			website missing
+		{% endif %}
+        <strong>Current Location:</strong> 
+		{% if me.location %}
+			{{me.location.name}}
+		{% else %}
+			location missing
+		{% endif %}
+        <strong>Email:</strong> 
+		{% if me.email %}
+			{{me.email}}
+		{% else %}
+			email missing
+		{% endif %}
     </section>
     
     <section class="msg innershadow">
@@ -100,5 +118,6 @@
         </li>
         {% endfor %}</ul>
     </section>
+
   </body>
 </html>
