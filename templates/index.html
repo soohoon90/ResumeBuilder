@@ -40,23 +40,23 @@
     </section>
 
     <section class="part ">
-        <h1>{{me.name}}</h1>	
-        {% if me.bio %} 
+        <h1>{{me.name}}</h1>
+        {% if me.bio %}
 			<h2>{{me.bio}}</h2>
 		{% endif %}
-        <strong>Website:</strong>
+        <h2>Website:</h2>
  		{% if me.website %} 
 			<a href="{{me.website}}">{{me.website}}</a>
 		{% else %}
 			website missing
 		{% endif %}
-        <strong>Current Location:</strong> 
+        <h2>Current Location:</h2> 
 		{% if me.location %}
 			{{me.location.name}}
 		{% else %}
 			location missing
 		{% endif %}
-        <strong>Email:</strong> 
+        <h2>Email:</h2> 
 		{% if me.email %}
 			{{me.email}}
 		{% else %}
@@ -65,8 +65,7 @@
     </section>
     
     <section class="msg innershadow">
-      <p>Verify your <span>Work History</span></p>
-      <a class="button" href="https://www.facebook.com/editprofile.php?sk=eduwork">Complete your Profile</a>
+      <p>Let's verify your <span>Work History</span> pulled from Facebook</p>
     </section>
 
     <section class="part ">
@@ -91,8 +90,7 @@
     </section>
 
     <section class="msg innershadow">
-      <p>Verify your <span>Education History</span></p>
-      <a class="button" href="https://www.facebook.com/editprofile.php?sk=eduwork">Complete your Profile</a>
+      <p>Let's go over your <span>Education History</span> pulled from Facebook</p>
     </section>
 
     <section class="part ">
@@ -117,6 +115,21 @@
             </ul>
         </li>
         {% endfor %}</ul>
+    </section>
+
+    <section class="msg innershadow">
+      <p>Did you want to add additional sections to your Resume?</p>
+      <a id="add-new-section-button"class="button" href="#">Add another section</a>
+    </section>
+
+    <section class="part ">
+        <h1>Your new section</h1>
+        <p>Add new information</p>
+    </section>
+
+    <section class="msg innershadow">
+      <p>Not satisfied with Information from Facebook?</p>
+      <a class="button" href="https://www.facebook.com/editprofile.php?sk=eduwork">Complete your Profile</a>
     </section>
 
   </body>
