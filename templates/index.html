@@ -33,12 +33,12 @@
       </div>
     </header>
 
-    <section class="msg">
+    <section class="msg innershadow">
       <p>Let's get started with <span>{{app.name}}</span>!</p>
       <p>Please verify your basic info</p>
     </section>
 
-    <section class="part dropshadow">
+    <section class="part ">
         <h1>{{me.name}}</h1>
         {% if me.bio %} <h2>{{me.bio}}</h2> {% endif %}
         {% if me.website %} Website: <a href="{{me.website}}">{{me.website}}</a>{% endif %}
@@ -46,12 +46,12 @@
         {% if me.email %} Email: {{me.email}}{% endif %}
     </section>
     
-    <section class="msg">
+    <section class="msg innershadow">
       <p>Verify your <span>Work History</span></p>
       <a class="button" href="https://www.facebook.com/editprofile.php?sk=eduwork">Complete your Profile</a>
     </section>
 
-    <section class="part dropshadow">
+    <section class="part ">
         <h1>Your Work History</h1>
         <ul class="big-list">
         {% for work in me.work %}
@@ -72,12 +72,12 @@
         {% endfor %}</ul>
     </section>
 
-    <section class="msg">
+    <section class="msg innershadow">
       <p>Verify your <span>Education History</span></p>
       <a class="button" href="https://www.facebook.com/editprofile.php?sk=eduwork">Complete your Profile</a>
     </section>
 
-    <section class="part dropshadow">
+    <section class="part ">
         <h1>Your Education History</h1>
         <ul class="big-list">
         {% for school in me.education %}
