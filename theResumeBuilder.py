@@ -107,7 +107,7 @@ def index():
     if request.args.get('code', None):
         access_token = fbapi_auth(request.args.get('code'))[0]
 
-        me = fb_call('me', args={'access_token': access_token})
+        me = fb_call('me', args={'access_token': access_token, 'fields':'name,bio,website,location,email,work,education'})
         app = fb_call(FBAPI_APP_ID, args={'access_token': access_token})
         likes = fb_call('me/likes',
                         args={'access_token': access_token, 'limit': 4})

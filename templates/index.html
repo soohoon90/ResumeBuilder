@@ -84,7 +84,7 @@
           <li>
             <p>
                 {% if school.concentration %}
-                <strong>{{school.concentration}} at {{school.school.name}}</strong>
+                <strong>{{school.concentration.name}} at {{school.school.name}}</strong>
                 {% else %}
                 <p><strong>{{school.school.name}}</strong></p>
                 {% endif %}
