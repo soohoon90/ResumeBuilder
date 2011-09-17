@@ -61,7 +61,7 @@
         <h3>Your Education</h3>
         <ul class="work">{% for school in me.education %}
         <li>
-            {% if school.concentration.name %}
+            {% if school.concentration %}
             <p>{{school.concentration.name}} at {{school.school.name}}</p>
             {% else %}
             <p>{{school.school.name}}</p>
