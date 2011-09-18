@@ -25,7 +25,8 @@
         });
         
         // add new section button
-        $("#add-new-section-button").click(function(){
+        $("#addNew").click(function(){
+            alert('test!');
             $("#additional").append('<h1 class="editable">Additional Section</h1>
             <p class="editable">Additional Information</p>');
             return false;
@@ -147,7 +148,7 @@
 
     <section class="msg innershadow">
       <p>Did you want to add additional sections to your Resume?</p>
-      <p><a id="add-new-section-button"class="button" href="#">Add another section</a></p>
+      <p><a id="addNew"class="button" href="#">Add another section</a></p>
     </section>
 
     <section id="additional" class="part">
