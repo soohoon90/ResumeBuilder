@@ -48,22 +48,22 @@
     </section>
 
     <section class="part ">
-        <!-- debug -->
-        <p>{{me}}</p>
-        
         <h1 class="editable">{{me.name}}</h1>
-        {% if me.bio %}
-			<h2 class="editable">{{me.bio}}</h2>
+        <h2>Short Description:</h2>
+ 		{% if me.bio %} 
+			<p class="editable">{{me.bio}}</p>
+		{% else %}
+			<p class="editable">Short Description missing!</p>
 		{% endif %}
         <h2>Website:</h2>
  		{% if me.website %} 
 			<a href="{{me.website}}" class="editable">{{me.website}}</a>
 		{% else %}
-			<p class="editable">website missing</p>
+			<p class="editable">Website missing!</p>
 		{% endif %}
         <h2>Current Location:</h2> 
 		{% if me.location %}
-			{{me.location.name}}
+			<p class="editable">{{me.location.name}}</p>
 		{% else %}
 			<p class="editable">location missing</p>
 		{% endif %}
@@ -71,7 +71,13 @@
 		{% if me.email %}
 			{{me.email}}
 		{% else %}
-			<p class="editable">email missing</p>
+			<p class="editable">Email missing!</p>
+		{% endif %}
+        <h2>Phone Number:</h2> 
+		{% if me.phone %}
+			{{me.phone}}
+		{% else %}
+			<p class="editable">Phone number missing!</p>
 		{% endif %}
     </section>
     
@@ -109,8 +115,6 @@
         <ul class="big-list">
         {% for school in me.education %}
           <li>
-            <!-- debug -->
-            {{school}}  
             <p>
                 {% if school.concentration %}
                 {{school.concentration}}
@@ -135,7 +139,7 @@
 
     <section class="msg innershadow">
       <p>Did you want to add additional sections to your Resume?</p>
-      <a id="add-new-section-button"class="button" href="#">Add another section</a>
+      <p><a id="add-new-section-button"class="button" href="#">Add another section</a></p>
     </section>
 
     <section class="part ">
