@@ -19,13 +19,16 @@
     <script src="static/jquery-1.6.4.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="static/jquery.inlineedit.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
+        // initialize editable
         $(function(){
             $('.editable').inlineEdit();
         });
         
-        $('#add-new-section-button').click(function(){
-            $('#additional').append('<h1 class="editable">Additional Section</h1>
+        // add new section button
+        $("#add-new-section-button").click(function(){
+            $("#additional").append('<h1 class="editable">Additional Section</h1>
             <p class="editable">Additional Information</p>');
+            return false;
         });
     </script>
   </head>
@@ -147,7 +150,7 @@
       <p><a id="add-new-section-button"class="button" href="#">Add another section</a></p>
     </section>
 
-    <section id="additional">
+    <section id="additional" class="part">
         <h1 class="editable">Additional Section</h1>
         <p class="editable">Additional Information</p>
     </section>
@@ -155,13 +158,9 @@
     <section class="msg innershadow">
       <p>Not satisfied with Information from Facebook?</p>
       <p>Come back after <a class="button" href="https://www.facebook.com/editprofile.php?sk=eduwork">Completing your Profile</a></p>
+      <p>Does everything look good? Then you are done!<p>
+      <p><a class="button" href="static/resume.html">Checkout your HTML Resume</a></p>
     </section>
-
-    <section class="msg innershadow">
-      <p>Not satisfied with Information from Facebook?</p>
-      <p>Come back after <a class="button" href="https://www.facebook.com/editprofile.php?sk=eduwork">Completing your Profile</a></p>
-    </section>
-
 
   </body>
 </html>
