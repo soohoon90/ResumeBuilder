@@ -137,6 +137,13 @@ def index():
     else:
         return redirect(oauth_login_url(next_url=get_home()))
 
+@app.route('/result')
+def result():
+	print get_home() + 'result/'
+	return render_template(
+        'resume.html')
+    
+
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     if app.config.get('FBAPI_APP_ID') and app.config.get('FBAPI_APP_SECRET'):
