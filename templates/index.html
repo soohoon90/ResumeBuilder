@@ -22,6 +22,11 @@
         $(function(){
             $('.editable').inlineEdit();
         });
+        
+        $('#add-new-section-button').click(function(){
+            $('#additional').append('<h1 class="editable">Additional Section</h1>
+            <p class="editable">Additional Information</p>');
+        });
     </script>
   </head>
   <body>
@@ -117,9 +122,9 @@
           <li>
             <p>
                 {% if school.concentration %}
-                {{school.concentration}}
-                {{school.concentration.id}}
-                {{school.concentration.name}}
+                1 {{school.concentration}}
+                2 {{school.concentration['name']}}
+                3 {{school.concentration.name}}
                 <strong class="editable">{{school.concentration.name}} at {{school.school.name}}</strong>
                 {% else %}
                 <strong class="editable">{{school.school.name}}</strong>
@@ -142,15 +147,21 @@
       <p><a id="add-new-section-button"class="button" href="#">Add another section</a></p>
     </section>
 
-    <section class="part ">
-        <h1 class="editable">Your new section</h1>
-        <p class="editable">Add new information</p>
+    <section id="additional">
+        <h1 class="editable">Additional Section</h1>
+        <p class="editable">Additional Information</p>
     </section>
 
     <section class="msg innershadow">
       <p>Not satisfied with Information from Facebook?</p>
       <p>Come back after <a class="button" href="https://www.facebook.com/editprofile.php?sk=eduwork">Completing your Profile</a></p>
     </section>
+
+    <section class="msg innershadow">
+      <p>Not satisfied with Information from Facebook?</p>
+      <p>Come back after <a class="button" href="https://www.facebook.com/editprofile.php?sk=eduwork">Completing your Profile</a></p>
+    </section>
+
 
   </body>
 </html>
