@@ -145,14 +145,12 @@
           <li>
             <p>
                 {% if school.concentration %}
-                0 {{school}}
-                1 {{school.concentration}}
-                11 {{school.concentration[0]}}
-                2 {{school.concentration['name']}}
-                3 {{school.concentration.name}}
-                <strong class="editable">{{school.concentration.name}} at {{school.school.name}}</strong>
+                    {{% for con in school.concentration %}}
+                        <strong class="editable">{{con.name}}</strong>
+                    {{% endfor %}}
+                    at <strong class="editable">{{school.school.name}}</strong>
                 {% else %}
-                <strong class="editable">{{school.school.name}}</strong>
+                    <strong class="editable">{{school.school.name}}</strong>
                 {% endif %}
             </p>
             <ul class="small-list">
