@@ -26,7 +26,7 @@
             
             // add new section button
             $("#newskill").click(function(){
-                $("#skillsummary").append('<p class="editable">Missing Skill</p>');
+                $("#skillsummary").append('<li class="editable">Skill Missing - Click to edit</li>');
                 return false;
             });
 
@@ -101,10 +101,12 @@
       <p>Please fill in your skill summary</p>
     </section>
 
-    <section id="skillsummary" class="part ">
+    <section class="part ">
         <h1>Your Skill Summary</h1>
         <a id="newskill" href="#">+ Add a new skill</a>
-        <p class="editable">Skill Missing</p>
+        <ul id="skillsummary">
+            <li class="editable">Skill Missing - Click to edit</li>
+        </ul>
     </section>
     
     <section class="msg innershadow">
