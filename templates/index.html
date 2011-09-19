@@ -19,17 +19,19 @@
     <script src="static/jquery-1.6.4.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="static/jquery.inlineedit.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
-        // initialize editable
-        $(function(){
+        // initialize 
+        $(document).ready(function() {
+            // editable stuff
             $('.editable').inlineEdit();
-        });
-        
-        // add new section button
-        $("#addNew").click(function(){
-            alert('test!');
-            $("#additional").append('<h1 class="editable">Additional Section</h1>
-            <p class="editable">Additional Information</p>');
-            return false;
+            
+            // add new section button
+            $("#addNew").click(function(){
+                alert('test!');
+                $("#additional").append('<h1 class="editable">Additional Section</h1>
+                <p class="editable">Additional Information</p>');
+                return false;
+            });
+            
         });
     </script>
   </head>
