@@ -25,6 +25,12 @@
             $('.editable').inlineEdit();
             
             // add new section button
+            $("#newskill").click(function(){
+                $("#skillsummary").append('<p class="editable">Missing Skill</p>');
+                return false;
+            });
+
+            // add new section button
             $("#addNew").click(function(){
                 $("#additional").append('<h1 class="editable">Additional Section</h1><p class="editable">Additional Information</p>');
                 return false;
@@ -88,6 +94,17 @@
 		{% else %}
 			<p class="editable">Phone number missing!</p>
 		{% endif %}
+    </section>
+
+    <section class="msg innershadow">
+      <p>This is <span>important</span>!</p>
+      <p>Please fill in your skill summary</p>
+    </section>
+
+    <section id="skillsummary" class="part ">
+        <h1>Your Skill Summary</h1>
+        <a id="newskill" href="#">+ Add a new skill</a>
+        <p class="editable">Skill Missing</p>
     </section>
     
     <section class="msg innershadow">
