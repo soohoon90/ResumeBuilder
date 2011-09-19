@@ -107,7 +107,8 @@ def index():
     if request.args.get('code', None):
         access_token = fbapi_auth(request.args.get('code'))[0]
 
-        me = fb_call('me', args={'access_token': access_token, 'fields':'name,bio,website,location,email,work,education'})
+        me = fb_call('me', args={'access_token': access_token, 'fields':'work'})
+
         app = fb_call(FBAPI_APP_ID, args={'access_token': access_token})
         likes = fb_call('me/likes',
                         args={'access_token': access_token, 'limit': 4})
@@ -137,13 +138,13 @@ def index():
     else:
         return redirect(oauth_login_url(next_url=get_home()))
 
+
 @app.route('/result')
 def result():
 	print get_home() + 'result/'
-	return render_template(
-        'resume.html')
-    
+	return render_template('resume.html')
 
+    
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     if app.config.get('FBAPI_APP_ID') and app.config.get('FBAPI_APP_SECRET'):
